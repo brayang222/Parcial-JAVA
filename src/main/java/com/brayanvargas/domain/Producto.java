@@ -15,7 +15,7 @@ public class Producto {
 
     }
 
-    public static Producto crearProducto(String nombreProductBV, int cantProductBV, int precioProductBV) {
+    public static Producto crearProductoBV(String nombreProductBV, int cantProductBV, int precioProductBV) {
         totalProduct += cantProductBV;
         if (cantProductBV < CANT_MAX_BV) {
             return new Producto(nombreProductBV, cantProductBV, precioProductBV);

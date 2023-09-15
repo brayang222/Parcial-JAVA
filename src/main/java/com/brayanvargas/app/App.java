@@ -13,10 +13,10 @@ public class App {
         //int cantidadSacar = Integer.parseInt(String.valueOf(scanner.nextInt())) ;
         //Integer aumentarCant = scanner.nextInt();
 
-        Producto product1 = Producto.crearProducto("papitas", 5, 2000);
-        Producto product2 = Producto.crearProducto("yogurt", 1, 2000);
-        Producto product3 = Producto.crearProducto("arepas", 2, 2000);
-        Producto product4 = Producto.crearProducto("pasteles", 1, 2000);
+        Producto product1 = Producto.crearProductoBV("papitas", 5, 2000);
+        Producto product2 = Producto.crearProductoBV("yogurt", 1, 2000);
+        Producto product3 = Producto.crearProductoBV("arepas", 2, 2000);
+        Producto product4 = Producto.crearProductoBV("pasteles", 1, 2000);
 
        // if (Producto. () <= 0) {
             List<Producto> agotados = new ArrayList<>();

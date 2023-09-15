@@ -18,7 +18,7 @@ public class Dispensador {
         }
     }
 
-    public void sacarProducto(int cantSacarBV) {
+    public void sacarProductoBV(int cantSacarBV) {
         int cantProductBV = Producto.getCantProductBV();
         if (cantSacarBV > cantProductBV) {
             System.out.println("No puedes sacar " + cantSacarBV + " productos, porque no hay suficientes");
