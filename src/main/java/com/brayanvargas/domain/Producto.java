@@ -3,20 +3,19 @@ package com.brayanvargas.domain;
 public class Producto {
     private String nombreProductBV;
     private static int cantProductBV = 0;
+    private int cantidadProductosBV;
     private static final Integer CANT_MAX_BV = 8;
     private int precioProductBV;
-    private int cantSacarBV;
-    private static int totalProduct;
 
     private Producto(String nombreProductBV, int cantProductBV, int precioProductBV) {
         this.nombreProductBV = nombreProductBV;
-        this.cantProductBV = cantProductBV;
+        this.cantidadProductosBV = cantProductBV;
         this.precioProductBV = precioProductBV;
 
+        cantProductBV += cantProductBV;
     }
 
     public static Producto crearProductoBV(String nombreProductBV, int cantProductBV, int precioProductBV) {
-        totalProduct += cantProductBV;
         if (cantProductBV < CANT_MAX_BV) {
             return new Producto(nombreProductBV, cantProductBV, precioProductBV);
         } else {
@@ -25,30 +24,21 @@ public class Producto {
         }
     }
 
-
-
     public String getNombreProductBV() {
         return nombreProductBV;
     }
 
-    public static int getCantProductBV() {
-        return cantProductBV;
+    public int getCantProductBV() {
+        return cantidadProductosBV;
     }
 
     public int getPrecioProductBV() {
         return precioProductBV;
     }
 
-    public int getCantSacarBV() {
-        return cantSacarBV;
-    }
-
-    public int getTotalProduct() {
-        return totalProduct;
-    }
-
-    public void setCantSacarBV(int cantSacarBV) {
-        this.cantSacarBV = cantSacarBV;
+    public void setCantProductBV(int cantProductBV) {
+        this.cantidadProductosBV = cantProductBV;
+        Producto.cantProductBV += cantProductBV;
     }
 
 }
